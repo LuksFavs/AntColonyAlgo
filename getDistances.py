@@ -394,8 +394,8 @@ for i in capitais_estaduais:
 with open('mun_dist.csv', encoding="utf8") as f:
 	csv_r=csv.reader(f, delimiter =',')
 	for row in csv_r:
-		if row[0] in capitais_estaduais and row[2] in capitais_estaduais and row[4] != "0" and row[0] != row[2]:
-			#print('achei', row[0], row[2], row[4])
+		if row[0] in capitais_estaduais and row[2] in capitais_estaduais and row[4] != "0" and row[0] != row[2] and int(row[3]) == capitais_estaduais[row[2]] and int(row[1]) == capitais_estaduais[row[0]]:
+			#print('achei', row[0],row[1], row[2],row[3], row[4])
 			popPerDis[row[0]][index[row[2]]] = np.round(float(row[4]))
 			popPerDis[row[2]][index[row[0]]] = np.round(float(row[4]))
 

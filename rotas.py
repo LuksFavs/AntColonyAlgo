@@ -70,7 +70,7 @@ class ANTS:
                         self.sumOfFer = localFer[index[k]]
                     self.sumOfFer/=len(self.caminho)
                     break
-            if bestCaminho != [] and self.obj > bestCaminho[0][0][0] and self.citiesVisited > bestCaminho[0][0][1] or self.percentPops>0.9 :
+            if bestCaminho != [] and self.obj > bestCaminho[0][0][0] and self.citiesVisited > bestCaminho[0][0][1] or self.percentPops>0.7 :
                 break
 
 
